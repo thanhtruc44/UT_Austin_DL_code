@@ -1,72 +1,72 @@
 # Deep Learning Course
 
-Tập hợp notebook và mã nguồn PyTorch được viết khi học môn Deep Learning, đi từ kiến thức nền tảng (tensor, hồi quy tuyến tính) đến mạng tích chập và Transformer.
+A collection of PyTorch notebooks and source code written while studying a Deep Learning course. It starts from the fundamentals (tensors, linear regression) and works up to convolutional networks and Transformers.
 
-## Nội dung
+## Contents
 
-| Thư mục | Chủ đề |
+| Folder | Topic |
 |---|---|
-| `Introduction/` | Tensor, phân phối xác suất, mô hình cơ bản |
-| `First_example/` | Hồi quy tuyến tính, đồ thị tính toán, gradient descent, hàm mất mát, phân loại nhị phân và đa lớp |
-| `Deep_network/` | Mạng sâu, SGD, quá trình huấn luyện (bài toán phân loại chó/mèo), thư viện nhỏ `utdl` |
-| `Convolution/` | Tích chập, mạng tích chập, dilation và up-convolution |
-| `Residuals_Normalizations/` | Kết nối residual và các kỹ thuật chuẩn hoá |
-| `Making_it_work/` | Script huấn luyện hoàn chỉnh (`model.py`, `train.py`) |
-| `Transformer/` | Positional embedding, Multi-Head Attention, kiến trúc Transformer, script huấn luyện |
+| `Introduction/` | Tensors, probability distributions, a basic model |
+| `First_example/` | Linear regression, computation graphs, gradient descent, loss functions, binary and multi-class classification |
+| `Deep_network/` | Deep networks, SGD, the training process (dogs vs. cats classification), and the small `utdl` helper package |
+| `Convolution/` | Convolution, convolutional networks, dilation and up-convolution |
+| `Residuals_Normalizations/` | Residual connections and normalization techniques |
+| `Making_it_work/` | A complete training script (`model.py`, `train.py`) |
+| `Transformer/` | Positional embeddings, Multi-Head Attention, the Transformer architecture, and training scripts |
 
-Các file `*_notebook.ipynb` là bản bài tập, còn `*_extended.ipynb` là bản mở rộng.
+Files named `*_notebook.ipynb` are the exercise versions, and `*_extended.ipynb` are the extended versions.
 
-## Cài đặt
+## Installation
 
-Yêu cầu: Python 3.10 trở lên.
+Requirements: Python 3.10 or newer.
 
 ```bash
-# 1. Clone repo
+# 1. Clone the repository
 git clone https://github.com/thanhtruc44/UT_Austin_DL_code.git
 cd UT_Austin_DL_code
 
-# 2. Tạo môi trường ảo
+# 2. Create a virtual environment
 python -m venv venv
 venv\Scripts\activate          # Windows
 # source venv/bin/activate     # macOS / Linux
 
-# 3. Cài thư viện
+# 3. Install dependencies
 pip install -r requirements.txt
 ```
 
-Nếu có GPU NVIDIA, hãy cài PyTorch đúng phiên bản CUDA theo hướng dẫn tại <https://pytorch.org/get-started/locally/>.
+If you have an NVIDIA GPU, install the PyTorch build that matches your CUDA version by following <https://pytorch.org/get-started/locally/>.
 
-## Dữ liệu
+## Data
 
-Dữ liệu **không** nằm trong repo vì dung lượng lớn. Hãy tải về và đặt đúng vị trí:
+The datasets are **not** included in this repository because of their size. Download them and place them at the following locations:
 
-| Dữ liệu | Đặt tại | Dùng cho |
+| Dataset | Location | Used by |
 |---|---|---|
-| Dogs and Cats | `Deep_network/dogs_and_cats/` (cấu trúc `dogs_and_cats/{train,test}/{cats,dogs}/`) | `Deep_network/` |
-| Oxford 102 Flowers | `Introduction/flowers/flowers-102/` ([nguồn](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)) | `Introduction/` |
+| Dogs and Cats | `Deep_network/dogs_and_cats/` (layout: `dogs_and_cats/{train,test}/{cats,dogs}/`) | `Deep_network/` |
+| Oxford 102 Flowers | `Introduction/flowers/flowers-102/` ([source](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)) | `Introduction/` |
 
-## Cách chạy
+## Usage
 
-**Notebook:**
+**Notebooks:**
 
 ```bash
 jupyter notebook
 ```
 
-Mở notebook trong thư mục tương ứng. Với `Deep_network/`, hãy chạy từ thư mục này để import được `utdl`.
+Open a notebook in the corresponding folder. For `Deep_network/`, run Jupyter from that folder so that `utdl` can be imported.
 
-**Script huấn luyện:**
+**Training script:**
 
 ```bash
 cd Making_it_work
 python train.py
 
-# Xem biểu đồ huấn luyện
+# View training curves
 tensorboard --logdir runs
 ```
 
-`train.py` dùng thư viện `fire`, nên bạn có thể truyền tham số qua dòng lệnh, xem `python train.py --help`.
+`train.py` uses the `fire` library, so arguments can be passed on the command line. Run `python train.py --help` to see the options.
 
-## Giấy phép
+## License
 
-Chưa chọn giấy phép. Nếu muốn người khác được phép dùng lại, bạn có thể thêm file `LICENSE`, ví dụ MIT.
+No license has been chosen yet. To let others reuse this code, consider adding a `LICENSE` file, for example MIT.
