@@ -1,0 +1,16 @@
+# Cài bằng: pip install -r requirements.txt
+# Với GPU NVIDIA, nên cài torch/torchvision theo hướng dẫn tại https://pytorch.org/get-started/locally/
+
+torch>=2.0
+torchvision>=0.15
+numpy
+scipy
+matplotlib
+pillow
+einops
+fire
+tensorboard
+
+# Chạy notebook
+jupyter
+ipykernel

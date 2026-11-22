@@ -1,0 +1,56 @@
+# ---------- Môi trường ảo ----------
+venv/
+.venv/
+env/
+ENV/
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+
+# ---------- Dữ liệu (tải riêng, xem README) ----------
+Deep_network/dogs_and_cats/
+Deep_network/dogs_and_cats.zip
+Introduction/flowers/
+/data/
+/datasets/
+*.zip
+*.tgz
+*.tar
+*.tar.gz
+*.mat
+*.csv
+*.npy
+*.npz
+*.parquet
+
+# ---------- Model / checkpoint / log huấn luyện ----------
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+runs/
+lightning_logs/
+wandb/
+tensorboard/
+
+# ---------- Bí mật ----------
+.env
+.env.*
+*.key
+*.pem
+
+# ---------- IDE / hệ điều hành ----------
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
